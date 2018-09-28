@@ -6,18 +6,29 @@
 
 		<script>
 
+			var x = document.getElementById("quantidadeVar").value
+
+			var vars = {quantHa }
+
+
+			var quant = 1
+			while (quant <=x) {
+
+
+				quant++
+			}
 
 
 
 		</script>
-
 	</head>
 	<body>
 
-		<input type="text"> 
+		Quantas variedades de sementes você quer validar?<input type="number" id"quantidadeVar" min=0 max=10>
 
-
-
+		Digite a variedade da semente: <input type="text" id"varSemente" >
+		Qual foi a quantidade de hectares plantados? <input type="number" min=0 max=150>
+		Qual foi a quantidades de sacos produzidos? <input type="number" min=0>
 
 	</body>
 </html>
