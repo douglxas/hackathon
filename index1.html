@@ -88,6 +88,99 @@
 
       </script>
 
+        
+        <style>
+           
+    .button {
+    background-color: #FFFF00 ;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-width: medium;
+    border-style: solid;
+    border-color: #000000;
+    }
+
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #A9A9A9;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #FFFF00;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+ 
+
+
+
+
+        </style>
+
+
+
+
     </head>
     <body>
       <p>Esse é um teste baseado na Escala de Hamilton para Avaliação de Depressão que tem como objetivo apenas uma orientação e não serve para diagnóstico.</p>
@@ -95,74 +188,194 @@
       <hr>
       <br>
       <br>
+
       Você sente seu humor deprimido? 
-      <input type="radio" name="botao">Não.
-      <input type="radio" name="botao" id="humor2">Algumas vezes.  
-      <input type="radio" name="botao" id="humor3">Vejo tudo negro e sem sáida.
-      <br><br>
+
+      <p><label class="container">Não.<input type="radio" name="radio">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Algumas vezes. <input type="radio"  name="radio" id="humor2">
+      <span class="checkmark"></span></p>
+      
+      <p><label class="container">Vejo tudo negro e sem sáida. <input type="radio"   name="radio" id="humor3">
+      <span class="checkmark"></span></p> 
+      <br><br>   
+    
+
+
       Você se sente culpado?
-      <input type="radio" name="botao1" id="culpado1">Não
-      <input type="radio" name="botao1" id="culpado2">Sinto que magoei/decepcionei os outros. 
-      <input type="radio" name="botao1" id="culpado3">Me sinto culpado sobre os erros do passado.  
-      <input type="radio" name="botao1" id="culpado4">Ouço vozes de acusação e tenho alucinações visuais ameaçadores.
+
+
+      <p><label class="container">Não. <input type="radio"  name="radio1">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Sinto que magoei/decepcionei os outros. <input type="radio"   name="radio1" id="culpado2">
+      <span class="checkmark"></span></p>
+
+
+      <p><label class="container">Me sinto culpado sobre os erros do passado. <input type="radio"    name="radio1" id="culpado3">
+      <span class="checkmark"></span></p>
+ 
+
+      <p><label class="container">Ouço vozes de acusação e tenho alucinações visuais ameaçadores.<input type="radio"   name="radio1" id="culpado4">
+      <span class="checkmark"></span></p>
       <br><br>
+
+
+
       Você já pensou em suicídio? 
-      <input type="radio" name="botao2" id="morte1">Não.
-      <input type="radio" name="botao2" id="morte2">Sim, sinto que a vida não vale a pena. 
-      <input type="radio" name="botao2" id="morte3">Tenho ideias e gestos suicidas.
-      <input type="radio" name="botao2" id="morte4">Já tentei suicídio.
+
+
+      <p><label class="container">Não. <input type="radio"   name="radio2">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Sim, sinto que a vida não vale a pena.  <input type="radio"   name="radio2" id="morte2">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Tenho ideias e gestos suicidas. <input type="radio"   name="radio2" id="morte3">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Já tentei suicídio.<input type="radio"   name="radio2" id="morte4">
+      <span class="checkmark"></span></p>
       <br><br>
+
+
       Como é a sua relação com o sono?
-      <input type="radio" name="botao3" id="sono1">Não sinto dificuldades para dormir.
-      <input type="radio" name="botao3" id="sono2">Tenho dificuldades para conciliar o sono.
-      <input type="radio" name="botao3" id="sono3">Acorda de madrugada mas volta a dormir.
-      <input type="radio" name="botao3" id="sono4">Incapaz de conciliar o sono se voltar a dormir.
+
+
+      <p><label class="container">Não sinto dificuldades para dormir. <input type="radio"   name="radio3">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Tenho dificuldades para conciliar o sono. <input type="radio"   name="radio3" id="sono2">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Acorda de madrugada mas volta a dormir.<input type="radio"   name="radio3" id="sono3">
+      <span class="checkmark"></span></p>
+ 
+      <p><label class="container">Incapaz de conciliar o sono se voltar a dormir.<input type="radio"   name="radio3" id="sono4">
+      <span class="checkmark"></span></p>
       <br><br>
+
+
       Como você se sente em relação a realizar atividades?
-      <input type="radio" name="botao4" id="atv1">Sem dificuldades para as realizar.
-      <input type="radio" name="botao4" id="atv2">Pensamento e sentimento de incapacidade.
-      <input type="radio" name="botao4" id="atv3">Sinto que regredi muito em relação a produtividade. 
+
+
+      <p><label class="container">Sem dificuldades para as realizar. <input type="radio"   name="radio4">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Pensamento e sentimento de incapacidade. <input type="radio"   name="radio4" id="atv2">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Sinto que regredi muito em relação a produtividade. <input type="radio"   name="radio4" id="atv3">
+      <span class="checkmark"></span></p>
       <br><br>
+
+
       Você é inquieto? 
-      <input type="radio" name="botao5" id="inquieto1">Pouco.
-      <input type="radio" name="botao5" id="inquieto2">Brinco com as mãos, com os cabelos, etc.
-      <input type="radio" name="botao5" id="inquieto3">Torço as mãos, rôo as unhas, arranco os cabelos, morde os lábios.
+
+      <p><label class="container">Pouco. <input type="radio"   name="radio5">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Brinco com as mãos, com os cabelos, etc.<input type="radio"   name="radio5" id="inquieto2">
+      <span class="checkmark"></span></p>
+
+      <p><label class="container">Torço as mãos, rôo as unhas, arranco os cabelos, morde os lábios..<input type="radio"   name="radio5" id="inquieto3">
+      <span class="checkmark"></span></p>
       <br><br>
+
+
       Você é irritado, nervoso ? 
-      <input type="radio" name="botao6" id="irritado1"> Raramente.
-      <input type="radio" name="botao6" id="irritado2">Vivo tenso e quase sempre estou preocupado.
-      <input type="radio" name="botao6" id="irritado3">Me sinto apavorado.
-      <br><br>
+
+
+       <p><label class="container">Raramente. <input type="radio"   name="radio6">
+       <span class="checkmark"></span></p>
+
+       <p><label class="container">Vivo tenso e quase sempre estou preocupado.<input type="radio"   name="radio6" id="irritado2">
+       <span class="checkmark"></span></p>
+
+       <p><label class="container">Me sinto apavorado.<input type="radio"   name="radio6" id="irritado3">
+       <span class="checkmark"></span></p>
+       <br><br>
+
+
       Como está seu apetite ?
-      <input type="radio" name="botao7" id="apetite1">Não alterou em nenhum sentido.
-      <input type="radio" name="botao7" id="apetite2">Tenho comido muito pouco.
-      <input type="radio" name="botao7" id="apetite3">Tenho comido exageradamente.
+
+
+       <p><label class="container">Não alterou em nenhum sentido.<input type="radio"   name="radio7">
+       <span class="checkmark"></span></p> 
+
+       <p><label class="container">Tenho comido muito pouco.<input type="radio"   name="radio7" id="apetite2">
+       <span class="checkmark"></span></p> 
+
+       <p><label class="container">Tenho comido exageradamente.<input type="radio"   name="radio7" id="apetite3">
+       <span class="checkmark"></span></p> 
       <br>
       <br>
+
+
       Você se sente perseguido ?
-      <input type="radio" name="botao8" id="perseguido1">Nunca.
-      <input type="radio" name="botao8" id="perseguido2">Às vezes acho que o mundo está contra mim.
-      <input type="radio" name="botao8" id="perseguido3">Totalmente.
+
+
+      <p><label class="container">Nunca.<input type="radio"   name="radio8">
+      <span class="checkmark"></span></p> 
+
+      <p><label class="container">Às vezes acho que o mundo está contra mim.<input type="radio"   name="radio8" id="perseguido2">
+      <span class="checkmark"></span></p> 
+
+      <p><label class="container">Totalmente.<input type="radio"   name="radio8" id="perseguido3">
+      <span class="checkmark"></span></p> 
       <br>
       <br>
+
+
       Você se sente isolado do mundo ?
-      <input type="radio" name="botao9" id="isolado1">Dificilmente.
-      <input type="radio" name="botao9" id="isolado2">Às vezes.
-      <input type="radio" name="botao9" id="isolado3">Me sinto em outro mundo.
+
+
+      <p><label class="container">Dificilmente.<input type="radio"   name="radio9">
+      <span class="checkmark"></span></p> 
+
+      <p><label class="container">Às vezes.<input type="radio"   name="radio9" id="isolado2">
+      <span class="checkmark"></span></p> 
+
+      <p><label class="container">Me sinto em outro mundo.<input type="radio"   name="radio9" id="isolado3">
+      <span class="checkmark"></span></p> 
       <br>
       <br>
+
+
       Você tem dificuldades para tomar decisões ?
-      <input type="radio" name="botao10" id="decisoes1"> De modo algum.  
-      <input type="radio" name="botao10" id="decisoes2"> Um pouco.
-      <input type="radio" name="botao10" id="decisoes3">Muitíssimo.
+
+
+      <p><label class="container">De modo algum.<input type="radio"   name="radio10">
+      <span class="checkmark"></span></p> 
+  
+      <p><label class="container">Um pouco.<input type="radio"   name="radio10" id="decisoes2">
+      <span class="checkmark"></span></p> 
+
+      <p><label class="container">Muitíssimo.<input type="radio"   name="radio10" id="decisoes3">
+      <span class="checkmark"></span></p> 
       <br>
       <br>
+
+
       Você sente fadiga, cansaço ou fraqueza? 
-      <input type="radio" name="botao11" id="fadiga1">Raramente.     
-      <input type="radio" name="botao11" id="fadiga2">Moderadamente.  
-      <input type="radio" name="botao11" id="fadiga3">Sempre.
+
+
+      <p><label class="container">Raramente.<input type="radio"   name="radio11">
+      <span class="checkmark"></span></p> 
+      
+      <p><label class="container">Moderadamente.<input type="radio"   name="radio11" id="fadiga2">
+      <span class="checkmark"></span></p> 
+  
+      <p><label class="container">Sempre.<input type="radio"   name="radio11" id="fadiga3">
+      <span class="checkmark"></span></p> 
+  
+
+
+      </label>
       <br>
       <br>
-      <button type="button" onClick="verificar()">Verificar</button>
+      <button type="button" class="button" onClick="verificar()">Verificar</button>
+
     </body>
 </html>    
