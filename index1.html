@@ -10,34 +10,36 @@
       function verificar() {
 
 
-        perg = 0  
+      var perg = 0  
 
-        if (document.getElementById("humor2").checked == true )
+        if (document.getElementById("humor2").checked == true ) {
           perg = perg + 1
-        if (document.getElementById("humor3").checked == true )
+        } else
+        if (document.getElementById("humor3").checked == true ) {
           perg = perg + 2
+        }
         if (document.getElementById("culpado2").checked == true )
           perg = perg + 1
-        if (document.getElementById("culpado3").checked == true )
+         if (document.getElementById("culpado3").checked == true )
           perg = perg + 2
-        if (document.getElementById("culpado4").checked == true )
+         if (document.getElementById("culpado4").checked == true )
           perg = perg + 3
-        if (document.getElementById("morte2").checked == true )
+         if (document.getElementById("morte2").checked == true )
           perg = perg + 1
-        if (document.getElementById("morte3").checked == true )
+         if (document.getElementById("morte3").checked == true )
           perg = perg + 2
-        if (document.getElementById("morte4").checked == true )
+         if (document.getElementById("morte4").checked == true )
           perg = perg + 3
         if (document.getElementById("sono2").checked == true )
           perg = perg + 1
         if (document.getElementById("sono3").checked == true )
-          perg = perg + 2
+         perg = perg + 2
         if (document.getElementById("sono4").checked == true )
           perg = perg + 3
         if (document.getElementById("atv2").checked == true )
           perg = perg + 1
         if (document.getElementById("atv3").checked == true )
-          perg = perg + 2
+         perg = perg + 2
         if (document.getElementById("inquieto2").checked == true )
           perg = perg + 1
         if (document.getElementById("inquieto3").checked == true )
@@ -45,17 +47,17 @@
         if (document.getElementById("irritado2").checked == true )
           perg = perg + 1
         if (document.getElementById("irritado3").checked == true )
-          perg = perg + 2
+         perg = perg + 2
         if (document.getElementById("apetite2").checked == true )
           perg = perg + 1
         if (document.getElementById("apetite3").checked == true )
-          perg = perg + 1
+         perg = perg + 1
         if (document.getElementById("perseguido2").checked == true )
           perg = perg + 1
         if (document.getElementById("perseguido3").checked == true )
           perg = perg + 2
         if (document.getElementById("isolado2").checked == true )
-          perg = perg + 1
+         perg = perg + 1
         if (document.getElementById("isolado3").checked == true )
           perg = perg + 2
         if (document.getElementById("decisoes2").checked == true )
@@ -67,29 +69,34 @@
         if (document.getElementById("fadiga3").checked == true )
           perg = perg + 2
         
-        if (perg<1)
-          document.write("Seu resultado no teste foi igual a 0. Você possui um equilíbrio mental excepcional. Continue assim! Mas lembre-se: nem todos os dias estamos bem e isso é normal dos seres humanos, não se cobre! Se souber de alguém que precise de ajuda, não esqueça de colaborar!")
-        else 
-          if (perg>=1 && perg<=12)
-            document.write("Você tem alguns sinais suspeitos, é melhor tomar cuidado. A nossa saúde mental é muito importante, o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
-          else
-            if (perg>12 && perg<=19)
-              document.write("Você precisa ficar de olho na sua saúde mental, pois possui características de pessoas que estão em uma pré depressão. Lembre-se: o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
-            else 
-              if(perg>19)
-                document.write("Você possui altos indícios de depressão e o seu caso é  muito delicado, é melhor procurar ajuda médica logo. Mas lembre-se: isso não é um diagnóstico completo.")
+       if (perg<1)
+         alert("Seu resultado no teste foi igual a 0. Você possui um equilíbrio mental excepcional. Continue assim! Mas lembre-se: nem todos os dias estamos bem e isso é normal dos seres humanos, não se cobre! Se souber de alguém que precise de ajuda, não esqueça de colaborar!")
+        
+        
+       if (perg>=1 && perg<=12)
+          alert("Você tem alguns sinais suspeitos, é melhor tomar cuidado. A nossa saúde mental é muito importante, o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
+        
+          
+               if (perg>12 && perg<=19)
+               alert("Você precisa ficar de olho na sua saúde mental, pois possui características de pessoas que estão em uma pré depressão. Lembre-se: o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
+        
+            
+                if (perg>19 && perg<=26)
+                alert("Você possui altos indícios de depressão e o seu caso é  muito delicado, é melhor procurar ajuda médica logo. Mas lembre-se: isso não é um diagnóstico completo.")
+        }
+              
 
-    </script>
+      </script>
 
     </head>
     <body>
-      <p><h3>Esse é um teste baseado na Escala de Hamilton para Avaliação de Depressão que tem como objetivo apenas uma orientação e não serve para diagnóstico.</p>
-      <p>Responda todas as perguntas com sinceridade e atenção. </p></h3>
+      <p>Esse é um teste baseado na Escala de Hamilton para Avaliação de Depressão que tem como objetivo apenas uma orientação e não serve para diagnóstico.</p>
+      <p>Responda todas as perguntas com sinceridade e atenção. </p>
       <hr>
       <br>
       <br>
       Você sente seu humor deprimido? 
-      <input type="radio" name="botao" id="humor1">Não.
+      <input type="radio" name="botao">Não.
       <input type="radio" name="botao" id="humor2">Algumas vezes.  
       <input type="radio" name="botao" id="humor3">Vejo tudo negro e sem sáida.
       <br><br>
@@ -156,10 +163,6 @@
       <input type="radio" name="botao11" id="fadiga3">Sempre.
       <br>
       <br>
-      <input type="button" value="Verificar" onClick="verificar()">
-
-        
-   
-
+      <button type="button" onClick="verificar()">Verificar</button>
     </body>
 </html>    
