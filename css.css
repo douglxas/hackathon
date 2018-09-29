@@ -1,0 +1,53 @@
+		<style>
+
+			body{
+				background-color:#FFF000;
+				margin: 0px;
+			}
+
+			#menu ul {
+				margin: 0;
+				background-color:#FFFF33;
+				list-style: none;
+				position: fixed;
+				top: 0;
+  				right: 0;
+  				left: 0;
+
+			}
+
+
+			#menu ul li {
+				display: inline;
+			}
+
+			#menu ul li a {
+				padding: 25px 20px;
+				display: inline-block;
+				color: #000000;
+				font-weight: bold;
+				text-decoration: none;
+				font-family: Verdana;
+				float: right;
+			}
+
+			.par {
+				padding-top: 70px;
+				padding-left: 110px;
+				font-family: Verdana;
+				font-size: 30px;
+				color: #000000;
+				font-weight: bold;
+			}
+			
+			p {
+				padding-left: 140px;
+				padding-right: 140px;
+				font-family: Verdana;
+				font-size: 20px;
+				color: #000000;
+				text-align: justify;
+
+			}
+
+		</style>
