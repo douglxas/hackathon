@@ -1,17 +1,88 @@
 <html>
   <head>
-    <title>SETEMBRO AMARELO</title>
+    <title>Setembro Amarelo</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="amarelo.png">
-    
+      <style>
+			    .button {
+			    background-color: #FFFF00;
+			    border: none;
+			    color: black;
+			    padding: 15px 32px;
+			    text-align: center;
+			    text-decoration: none;
+			    display: inline-block;
+			    font-size: 16px;
+			    font-family: Verdana;
+			    margin: 4px 2px;
+			    cursor: pointer;
+			    border-width: medium;
+			    border-style: solid;
+			    border-color: #000000;
+			    }
+
+			.container {
+			    display: block;
+			    position: relative;
+			    padding-left: 10px;
+			    margin-bottom: 12px;
+			    cursor: pointer;
+			    font-size: 16px;
+			}
+
+			.container input {
+			    position: relative;
+			    opacity: 0;
+			    cursor: pointer;
+			}
+
+			.checkmark {
+			    position: absolute;
+			    top: 0;
+			    left: 0;
+			    height: 14px;
+			    width: 14px;
+			    background-color: #eee;
+			    border-radius: 50%;
+			}
+
+			.container:hover input ~ .checkmark {
+			    background-color: #A9A9A9;
+			}
+
+			.container input:checked ~ .checkmark {
+			    background-color: #FFFF00;
+			}
+
+			.checkmark:after {
+			    content: "";
+			    position: relative;
+			    display: none;
+			}
+
+			.container input:checked ~ .checkmark:after {
+			    display: block;
+			}
+
+			.container .checkmark:after {
+			  top: 4px;
+			  left: 4px;
+			  width: 6px;
+			  height: 6px;
+			  border-radius: 50%;
+			  background: white;
+			}
+
+			.x {
+				font-size: 18px;
+				font-family: Verdana;
+				padding-left: 15px;
+			}
+
+        </style>
     <script>
-
-
       function verificar() {
-
-
       var perg = 0  
-
         if (document.getElementById("humor2").checked == true ) {
           perg = perg + 1
         } else
@@ -71,311 +142,142 @@
         
        if (perg<1)
          alert("Seu resultado no teste foi igual a 0. Você possui um equilíbrio mental excepcional. Continue assim! Mas lembre-se: nem todos os dias estamos bem e isso é normal dos seres humanos, não se cobre! Se souber de alguém que precise de ajuda, não esqueça de colaborar!")
-        
-        
        if (perg>=1 && perg<=12)
           alert("Você tem alguns sinais suspeitos, é melhor tomar cuidado. A nossa saúde mental é muito importante, o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
-        
           
-               if (perg>12 && perg<=19)
-               alert("Você precisa ficar de olho na sua saúde mental, pois possui características de pessoas que estão em uma pré depressão. Lembre-se: o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
-        
-            
-                if (perg>19 && perg<=26)
-                alert("Você possui altos indícios de depressão e o seu caso é  muito delicado, é melhor procurar ajuda médica logo. Mas lembre-se: isso não é um diagnóstico completo.")
+       if (perg>12 && perg<=19)
+           alert("Você precisa ficar de olho na sua saúde mental, pois possui características de pessoas que estão em uma pré depressão. Lembre-se: o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
+       
+		if (perg>19 && perg<=26)
+            alert("Você possui altos indícios de depressão e o seu caso é  muito delicado, é melhor procurar ajuda médica logo. Mas lembre-se: isso não é um diagnóstico completo.")
         }
               
-
       </script>
 
-        
-        <style>
-           
-    .button {
-    background-color: #FFFF00 ;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-width: medium;
-    border-style: solid;
-    border-color: #000000;
-    }
-
-
-
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 16px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-/* Create a custom radio button */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 18px;
-    width: 18px;
-    background-color: #eee;
-    border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #A9A9A9;
-}
-
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-    background-color: #FFFF00;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
-  top: 5px;
-  left: 5px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
- 
-
-
-
-
-        </style>
-
-
-
-
     </head>
-    <body>
-      <p>Esse é um teste baseado na Escala de Hamilton para Avaliação de Depressão que tem como objetivo apenas uma orientação e não serve para diagnóstico.</p>
-      <p>Responda todas as perguntas com sinceridade e atenção. </p>
+    <body bgcolor = "#DCDCDC">		
+    <link rel="stylesheet" type="text/css" href="css.css">
+			<div id = "menu"> 
+				<ul>
+					<li><a href= "https://www.cvv.org.br"> CVV </a></li>
+					<li><a href= "x"> Como ajudar </a></li> 
+					<li><a href= "x"> Faça o teste! </a></li>
+					<li><a href= "x"> Ansiedade </a></li>
+					<li><a href= "x"> Estatísticas </a></li>
+					<li><a href= "x"> Depressão </a></li>
+					<li><a href= "x"> Ínicio </a></li>
+					<li><i><h2>Setembro Amarelo </h2></i></li>
+				</ul>
+			</div>
+			<br>
+      <div class="par"><h6>Esse é um teste baseado na Escala de Hamilton para Avaliação de Depressão que tem como objetivo apenas uma orientação e não serve para diagnóstico. Responda todas as perguntas com sinceridade e atenção. </h6></div>
       <hr>
       <br>
       <br>
 
-      Você sente seu humor deprimido? 
-
+      <div class="x">Você sente seu humor deprimido?</div>
       <p><label class="container">Não.<input type="radio" name="radio">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Algumas vezes. <input type="radio"  name="radio" id="humor2">
       <span class="checkmark"></span></p>
-      
       <p><label class="container">Vejo tudo negro e sem sáida. <input type="radio"   name="radio" id="humor3">
       <span class="checkmark"></span></p> 
-      <br><br>   
-    
-
-
-      Você se sente culpado?
-
-
+      <br>   
+      <div class="x">Você se sente culpado?</div>
       <p><label class="container">Não. <input type="radio"  name="radio1">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Sinto que magoei/decepcionei os outros. <input type="radio"   name="radio1" id="culpado2">
       <span class="checkmark"></span></p>
-
-
       <p><label class="container">Me sinto culpado sobre os erros do passado. <input type="radio"    name="radio1" id="culpado3">
       <span class="checkmark"></span></p>
- 
-
       <p><label class="container">Ouço vozes de acusação e tenho alucinações visuais ameaçadores.<input type="radio"   name="radio1" id="culpado4">
       <span class="checkmark"></span></p>
-      <br><br>
-
-
-
-      Você já pensou em suicídio? 
-
-
+      <br>
+	  <div class="x">Você já pensou em suicídio? </div>
       <p><label class="container">Não. <input type="radio"   name="radio2">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Sim, sinto que a vida não vale a pena.  <input type="radio"   name="radio2" id="morte2">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Tenho ideias e gestos suicidas. <input type="radio"   name="radio2" id="morte3">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Já tentei suicídio.<input type="radio"   name="radio2" id="morte4">
       <span class="checkmark"></span></p>
-      <br><br>
-
-
-      Como é a sua relação com o sono?
-
-
+      <br>
+      <div class="x">Como é a sua relação com o sono?</div>
       <p><label class="container">Não sinto dificuldades para dormir. <input type="radio"   name="radio3">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Tenho dificuldades para conciliar o sono. <input type="radio"   name="radio3" id="sono2">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Acorda de madrugada mas volta a dormir.<input type="radio"   name="radio3" id="sono3">
       <span class="checkmark"></span></p>
- 
       <p><label class="container">Incapaz de conciliar o sono se voltar a dormir.<input type="radio"   name="radio3" id="sono4">
       <span class="checkmark"></span></p>
-      <br><br>
-
-
-      Como você se sente em relação a realizar atividades?
-
-
+      <br>
+      <div class="x">Como você se sente em relação a realizar atividades?</div>
       <p><label class="container">Sem dificuldades para as realizar. <input type="radio"   name="radio4">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Pensamento e sentimento de incapacidade. <input type="radio"   name="radio4" id="atv2">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Sinto que regredi muito em relação a produtividade. <input type="radio"   name="radio4" id="atv3">
       <span class="checkmark"></span></p>
-      <br><br>
-
-
-      Você é inquieto? 
-
+      <br>
+      <div class="x">Você é inquieto?</div> 
       <p><label class="container">Pouco. <input type="radio"   name="radio5">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Brinco com as mãos, com os cabelos, etc.<input type="radio"   name="radio5" id="inquieto2">
       <span class="checkmark"></span></p>
-
       <p><label class="container">Torço as mãos, rôo as unhas, arranco os cabelos, morde os lábios..<input type="radio"   name="radio5" id="inquieto3">
       <span class="checkmark"></span></p>
-      <br><br>
-
-
-      Você é irritado, nervoso ? 
-
-
-       <p><label class="container">Raramente. <input type="radio"   name="radio6">
-       <span class="checkmark"></span></p>
-
-       <p><label class="container">Vivo tenso e quase sempre estou preocupado.<input type="radio"   name="radio6" id="irritado2">
-       <span class="checkmark"></span></p>
-
-       <p><label class="container">Me sinto apavorado.<input type="radio"   name="radio6" id="irritado3">
-       <span class="checkmark"></span></p>
-       <br><br>
-
-
-      Como está seu apetite ?
-
-
-       <p><label class="container">Não alterou em nenhum sentido.<input type="radio"   name="radio7">
-       <span class="checkmark"></span></p> 
-
-       <p><label class="container">Tenho comido muito pouco.<input type="radio"   name="radio7" id="apetite2">
-       <span class="checkmark"></span></p> 
-
-       <p><label class="container">Tenho comido exageradamente.<input type="radio"   name="radio7" id="apetite3">
+      <br>
+      <div class="x">Você é irritado, nervoso?</div>
+      <p><label class="container">Raramente. <input type="radio" name="radio6">
+      <span class="checkmark"></span></p>
+      <p><label class="container">Vivo tenso e quase sempre estou preocupado.<input type="radio"   name="radio6" id="irritado2">
+      <span class="checkmark"></span></p>
+      <p><label class="container">Me sinto apavorado.<input type="radio"   name="radio6" id="irritado3">
+      <span class="checkmark"></span></p>
+      <br>
+      <div class="x">Como está seu apetite?</div>
+      <p><label class="container">Não alterou em nenhum sentido.<input type="radio"   name="radio7">
+      <span class="checkmark"></span></p> 
+      <p><label class="container">Tenho comido muito pouco.<input type="radio"   name="radio7" id="apetite2">
+      <span class="checkmark"></span></p> 
+      <p><label class="container">Tenho comido exageradamente.<input type="radio"   name="radio7" id="apetite3">
        <span class="checkmark"></span></p> 
       <br>
-      <br>
-
-
-      Você se sente perseguido ?
-
-
+      <div class="x">Você se sente perseguido?</div>
       <p><label class="container">Nunca.<input type="radio"   name="radio8">
       <span class="checkmark"></span></p> 
-
       <p><label class="container">Às vezes acho que o mundo está contra mim.<input type="radio"   name="radio8" id="perseguido2">
       <span class="checkmark"></span></p> 
-
       <p><label class="container">Totalmente.<input type="radio"   name="radio8" id="perseguido3">
       <span class="checkmark"></span></p> 
       <br>
-      <br>
-
-
-      Você se sente isolado do mundo ?
-
-
+      <div class="x">Você se sente isolado do mundo?</div>
       <p><label class="container">Dificilmente.<input type="radio"   name="radio9">
       <span class="checkmark"></span></p> 
-
       <p><label class="container">Às vezes.<input type="radio"   name="radio9" id="isolado2">
       <span class="checkmark"></span></p> 
-
       <p><label class="container">Me sinto em outro mundo.<input type="radio"   name="radio9" id="isolado3">
       <span class="checkmark"></span></p> 
       <br>
-      <br>
-
-
-      Você tem dificuldades para tomar decisões ?
-
-
+      <div class="x">Você tem dificuldades para tomar decisões?</div>
       <p><label class="container">De modo algum.<input type="radio"   name="radio10">
       <span class="checkmark"></span></p> 
-  
       <p><label class="container">Um pouco.<input type="radio"   name="radio10" id="decisoes2">
       <span class="checkmark"></span></p> 
-
       <p><label class="container">Muitíssimo.<input type="radio"   name="radio10" id="decisoes3">
       <span class="checkmark"></span></p> 
       <br>
-      <br>
-
-
-      Você sente fadiga, cansaço ou fraqueza? 
-
-
+      <div class="x">Você sente fadiga, cansaço ou fraqueza? </div>
       <p><label class="container">Raramente.<input type="radio"   name="radio11">
       <span class="checkmark"></span></p> 
-      
       <p><label class="container">Moderadamente.<input type="radio"   name="radio11" id="fadiga2">
       <span class="checkmark"></span></p> 
-  
       <p><label class="container">Sempre.<input type="radio"   name="radio11" id="fadiga3">
       <span class="checkmark"></span></p> 
-  
-
-
       </label>
       <br>
-      <br>
       <button type="button" class="button" onClick="verificar()">Verificar</button>
-
     </body>
 </html>    
