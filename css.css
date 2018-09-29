@@ -10,6 +10,7 @@
 				background-color:#FFFF33;
 				list-style: none;
 				position: fixed;
+				z-index: 2;
 				top: 0;
   				right: 0;
   				left: 0;
@@ -26,6 +27,7 @@
 				padding: 25px 20px;
 				display: inline-block;
 				color: #000000;
+				z-index: 2;
 				font-weight: bold;
 				text-decoration: none;
 				font-family: Verdana;
