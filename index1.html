@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>SETEMBRO AMARELO</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="amarelo.png">
+    
+    <script>
+
+
+      function verificar() {
+
+
+        perg = 0  
+
+        if (document.getElementById("humor2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("humor3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("culpado2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("culpado3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("culpado4").checked == true )
+          perg = perg + 3
+        if (document.getElementById("morte2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("morte3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("morte4").checked == true )
+          perg = perg + 3
+        if (document.getElementById("sono2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("sono3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("sono4").checked == true )
+          perg = perg + 3
+        if (document.getElementById("atv2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("atv3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("inquieto2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("inquieto3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("irritado2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("irritado3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("apetite2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("apetite3").checked == true )
+          perg = perg + 1
+        if (document.getElementById("perseguido2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("perseguido3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("isolado2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("isolado3").checked == true )
+          perg = perg + 2
+        if (document.getElementById("decisoes2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("decisoes3").checked == true )
+          perg = perg + 2    
+        if (document.getElementById("fadiga2").checked == true )
+          perg = perg + 1
+        if (document.getElementById("fadiga3").checked == true )
+          perg = perg + 2
+        
+        if (perg<1)
+          document.write("Seu resultado no teste foi igual a 0. Você possui um equilíbrio mental excepcional. Continue assim! Mas lembre-se: nem todos os dias estamos bem e isso é normal dos seres humanos, não se cobre! Se souber de alguém que precise de ajuda, não esqueça de colaborar!")
+        else 
+          if (perg>=1 && perg<=12)
+            document.write("Você tem alguns sinais suspeitos, é melhor tomar cuidado. A nossa saúde mental é muito importante, o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
+          else
+            if (perg>12 && perg<=19)
+              document.write("Você precisa ficar de olho na sua saúde mental, pois possui características de pessoas que estão em uma pré depressão. Lembre-se: o recomendável é consultar um profissional, pois isso não é um diagnóstico completo.")
+            else 
+              if(perg>19)
+                document.write("Você possui altos indícios de depressão e o seu caso é  muito delicado, é melhor procurar ajuda médica logo. Mas lembre-se: isso não é um diagnóstico completo.")
+
+    </script>
+
+    </head>
+    <body>
+      <p><h3>Esse é um teste baseado na Escala de Hamilton para Avaliação de Depressão que tem como objetivo apenas uma orientação e não serve para diagnóstico.</p>
+      <p>Responda todas as perguntas com sinceridade e atenção. </p></h3>
+      <hr>
+      <br>
+      <br>
+      Você sente seu humor deprimido? 
+      <input type="radio" name="botao" id="humor1">Não.
+      <input type="radio" name="botao" id="humor2">Algumas vezes.  
+      <input type="radio" name="botao" id="humor3">Vejo tudo negro e sem sáida.
+      <br><br>
+      Você se sente culpado?
+      <input type="radio" name="botao1" id="culpado1">Não
+      <input type="radio" name="botao1" id="culpado2">Sinto que magoei/decepcionei os outros. 
+      <input type="radio" name="botao1" id="culpado3">Me sinto culpado sobre os erros do passado.  
+      <input type="radio" name="botao1" id="culpado4">Ouço vozes de acusação e tenho alucinações visuais ameaçadores.
+      <br><br>
+      Você já pensou em suicídio? 
+      <input type="radio" name="botao2" id="morte1">Não.
+      <input type="radio" name="botao2" id="morte2">Sim, sinto que a vida não vale a pena. 
+      <input type="radio" name="botao2" id="morte3">Tenho ideias e gestos suicidas.
+      <input type="radio" name="botao2" id="morte4">Já tentei suicídio.
+      <br><br>
+      Como é a sua relação com o sono?
+      <input type="radio" name="botao3" id="sono1">Não sinto dificuldades para dormir.
+      <input type="radio" name="botao3" id="sono2">Tenho dificuldades para conciliar o sono.
+      <input type="radio" name="botao3" id="sono3">Acorda de madrugada mas volta a dormir.
+      <input type="radio" name="botao3" id="sono4">Incapaz de conciliar o sono se voltar a dormir.
+      <br><br>
+      Como você se sente em relação a realizar atividades?
+      <input type="radio" name="botao4" id="atv1">Sem dificuldades para as realizar.
+      <input type="radio" name="botao4" id="atv2">Pensamento e sentimento de incapacidade.
+      <input type="radio" name="botao4" id="atv3">Sinto que regredi muito em relação a produtividade. 
+      <br><br>
+      Você é inquieto? 
+      <input type="radio" name="botao5" id="inquieto1">Pouco.
+      <input type="radio" name="botao5" id="inquieto2">Brinco com as mãos, com os cabelos, etc.
+      <input type="radio" name="botao5" id="inquieto3">Torço as mãos, rôo as unhas, arranco os cabelos, morde os lábios.
+      <br><br>
+      Você é irritado, nervoso ? 
+      <input type="radio" name="botao6" id="irritado1"> Raramente.
+      <input type="radio" name="botao6" id="irritado2">Vivo tenso e quase sempre estou preocupado.
+      <input type="radio" name="botao6" id="irritado3">Me sinto apavorado.
+      <br><br>
+      Como está seu apetite ?
+      <input type="radio" name="botao7" id="apetite1">Não alterou em nenhum sentido.
+      <input type="radio" name="botao7" id="apetite2">Tenho comido muito pouco.
+      <input type="radio" name="botao7" id="apetite3">Tenho comido exageradamente.
+      <br>
+      <br>
+      Você se sente perseguido ?
+      <input type="radio" name="botao8" id="perseguido1">Nunca.
+      <input type="radio" name="botao8" id="perseguido2">Às vezes acho que o mundo está contra mim.
+      <input type="radio" name="botao8" id="perseguido3">Totalmente.
+      <br>
+      <br>
+      Você se sente isolado do mundo ?
+      <input type="radio" name="botao9" id="isolado1">Dificilmente.
+      <input type="radio" name="botao9" id="isolado2">Às vezes.
+      <input type="radio" name="botao9" id="isolado3">Me sinto em outro mundo.
+      <br>
+      <br>
+      Você tem dificuldades para tomar decisões ?
+      <input type="radio" name="botao10" id="decisoes1"> De modo algum.  
+      <input type="radio" name="botao10" id="decisoes2"> Um pouco.
+      <input type="radio" name="botao10" id="decisoes3">Muitíssimo.
+      <br>
+      <br>
+      Você sente fadiga, cansaço ou fraqueza? 
+      <input type="radio" name="botao11" id="fadiga1">Raramente.     
+      <input type="radio" name="botao11" id="fadiga2">Moderadamente.  
+      <input type="radio" name="botao11" id="fadiga3">Sempre.
+      <br>
+      <br>
+      <input type="button" value="Verificar" onClick="verificar()">
+
+        
+   
+
+    </body>
+</html>    
